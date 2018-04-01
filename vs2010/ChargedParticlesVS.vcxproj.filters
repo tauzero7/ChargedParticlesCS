@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\src\Camera.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLShader.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\RenderText.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\utils.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\gl3w\gl3w.c">
+      <Filter>gl3w</Filter>
+    </ClCompile>
+    <ClCompile Include="..\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\Camera.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\defs.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLShader.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\RenderText.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utils.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\gl3w\GL3\gl3w.h">
+      <Filter>gl3w\GL3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\gl3w\GL3\gl3.h">
+      <Filter>gl3w\GL3</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{73de152a-80f4-4087-9cdb-08d1625118bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources">
+      <UniqueIdentifier>{6b912cba-2e1c-4a26-ba23-74a38ec0a398}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gl3w">
+      <UniqueIdentifier>{2aca5b6a-d33d-4efe-b7ff-95c37af6aa68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gl3w\GL3">
+      <UniqueIdentifier>{ae21a58d-f357-4f9f-9b2c-95791846286d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cuda">
+      <UniqueIdentifier>{453390bc-0886-40fc-9f14-9f463556fd1b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scenes">
+      <UniqueIdentifier>{5caef2c5-9a36-4863-9ca6-d80ff7e526b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{559a6145-3a5a-400a-95e3-a280bbe6476e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\cuda\cs_sphere.inl">
+      <Filter>cuda</Filter>
+    </None>
+    <None Include="..\cuda\cs_torus.inl">
+      <Filter>cuda</Filter>
+    </None>
+    <None Include="..\cuda\header.cuh">
+      <Filter>cuda</Filter>
+    </None>
+    <None Include="..\cuda\cs_frustum.inl">
+      <Filter>cuda</Filter>
+    </None>
+    <None Include="..\cuda\cs_plane.inl">
+      <Filter>cuda</Filter>
+    </None>
+    <None Include="..\scenes\single_sphere.inl">
+      <Filter>Scenes</Filter>
+    </None>
+    <None Include="..\scenes\single_torus.inl">
+      <Filter>Scenes</Filter>
+    </None>
+    <None Include="..\scenes\two_spheres.inl">
+      <Filter>Scenes</Filter>
+    </None>
+    <None Include="..\scenes\two_torii.inl">
+      <Filter>Scenes</Filter>
+    </None>
+    <None Include="..\shaders\curvedSurface.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\shaders\curvedSurface.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\shaders\fboPotential.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\shaders\fboPotential.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\shaders\fboShow.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\shaders\fboShow.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\shaders\fboTest.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\shaders\fboTest.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\shaders\particleMapping.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\shaders\particleMapping.geom">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\shaders\particleMapping.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\scenes\single_frustum.inl">
+      <Filter>Scenes</Filter>
+    </None>
+    <None Include="..\shaders\help.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\shaders\help.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\main.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="..\cuda\curvedSurfaceCode.cu">
+      <Filter>cuda</Filter>
+    </CudaCompile>
+  </ItemGroup>
+</Project>

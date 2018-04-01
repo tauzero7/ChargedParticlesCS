@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <GL3W_DIR>../gl3w</GL3W_DIR>
+    <GLM_DIR>../glm</GLM_DIR>
+    <FREEGLUT_DIR>../freeglut</FREEGLUT_DIR>
+    <FREETYPE_DIR>../freetype-2.3.5</FREETYPE_DIR>
+    <PRECISION_IN_USE>USE_DOUBLE</PRECISION_IN_USE>
+    <COMPUTE_CAPABILITY>compute_20,sm_20</COMPUTE_CAPABILITY>
+    <FBO_TEX_SIZE>512</FBO_TEX_SIZE>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../;../scenes;../cuda;../src;$(FREETYPE_DIR)/include;$(FREETYPE_DIR)/include/freetype2;$(FREEGLUT_DIR)/include;$(GLM_DIR);$(GL3W_DIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>$(PRECISION_IN_USE);FBO_TEXTURE_SIZE=$(FBO_TEX_SIZE);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>..\;$(FREEGLUT_DIR)/lib;$(FREETYPE_DIR)/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>cudart.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <CudaCompile>
+      <CodeGeneration>$(COMPUTE_CAPABILITY);%(CodeGeneration)</CodeGeneration>
+      <Include>../;../cuda</Include>
+      <AdditionalCompilerOptions>
+      </AdditionalCompilerOptions>
+      <Defines>$(PRECISION_IN_USE)</Defines>
+      <HostDebugInfo>false</HostDebugInfo>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="GL3W_DIR">
+      <Value>$(GL3W_DIR)</Value>
+    </BuildMacro>
+    <BuildMacro Include="GLM_DIR">
+      <Value>$(GLM_DIR)</Value>
+    </BuildMacro>
+    <BuildMacro Include="FREEGLUT_DIR">
+      <Value>$(FREEGLUT_DIR)</Value>
+    </BuildMacro>
+    <BuildMacro Include="FREETYPE_DIR">
+      <Value>$(FREETYPE_DIR)</Value>
+    </BuildMacro>
+    <BuildMacro Include="PRECISION_IN_USE">
+      <Value>$(PRECISION_IN_USE)</Value>
+    </BuildMacro>
+    <BuildMacro Include="COMPUTE_CAPABILITY">
+      <Value>$(COMPUTE_CAPABILITY)</Value>
+    </BuildMacro>
+    <BuildMacro Include="FBO_TEX_SIZE">
+      <Value>$(FBO_TEX_SIZE)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>
